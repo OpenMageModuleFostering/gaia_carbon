@@ -1,0 +1,35 @@
+<?php /** @var $this Gaia_Carbon_Block_Checkout_Carbon **/ ?>
+<?php if($this->isEnabled() && $this->isOptional()): ?>
+<div class="cart-carbon">
+    <input class="css-checkbox" type="checkbox" name="add-carbon" id="add-carbon" title="<?php echo $this->__('Offset Carbon') ?>" onclick="addCarbon(this)" <?php if($this->isCarbonSelected()) {echo 'checked=\"checked\"';}?> />
+    <label class="css-label" for="add-carbon"><?php echo $this->__("Offset Carbon") ?></label>
+    <a class="question-mark tip" target="_blank" href="<?php echo $this->getCarbonUrl() ?>">
+	<span><?php echo $this->__($this->getCarbonDescription()) ?></span>
+    </a>
+    <br/><span id="loading" style="display:none;"><?php echo $this->__('Please wait ...')?></span>
+</div>
+<?php endif; ?>
+<script type="text/javascript">
+//<![CDATA[
+var carbon_url = '<?php echo $this->getUrl('carbon/ajax/addcarbon', array('_secure' => Mage::app()->getStore()->isCurrentlySecure())); ?>';
+function addCarbon(checkbox) {
+    checkbox.disable();
+    $('loading').show();
+    var curStatus = 0;
+    if (checkbox.checked) {
+	curStatus = 1;
+    }
+    new Ajax.Request(carbon_url, {
+	parameters: {
+	    status: curStatus
+	},
+	onComplete: function(resp){
+	    Element.replace('shopping-cart-totals-table', resp.responseText);
+	    $('loading').hide();
+	    checkbox.enable();
+	},
+	method: 'post'
+    });
+}       
+//]]
+</script>

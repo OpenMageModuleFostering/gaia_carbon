@@ -1,0 +1,19 @@
+<?php
+/**
+ * Description of class...
+ * 
+ * @category    Gaia
+ * @package     Gaia_Carbon
+ * @author      CZ Digital Team <martin.novak@czdigital.com.au>
+ */
+?>
+<?php $this->setPriceDataObject($this->getSource()) ?>
+
+<?php if ((float) $this->getSource()->getCarbonAmount()): ?>
+    <tr>
+        <td class="label"><?php echo Mage::helper('carbon')->__('Carbon') ?></td>
+        <td>
+            <?php echo $this->displayPrices($this->getSource()->getBaseCarbonAmount(), $this->getSource()->getCarbonAmount()); ?>
+        </td>
+    </tr>
+<?php endif; ?>

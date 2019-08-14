@@ -1,0 +1,98 @@
+
+input[type=checkbox].css-checkbox {
+      position: absolute; 
+      overflow: hidden; 
+      clip: rect(0 0 0 0); 
+      height:1px; 
+      width:1px; 
+      margin:-1px; 
+      padding:0;
+      border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+      padding-left:20px;
+      height:15px; 
+      display:inline-block;
+      line-height:15px;
+      background-repeat:no-repeat;
+      background-position: 0 0;
+      font-size:15px;
+      vertical-align:middle;
+      cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+      background-position: 0 -15px;
+}
+
+.css-label{
+      background-image: url('../images/lite-green-check.png'); 
+      /**background-image: url('../images/dark-check-green.png');}**/
+}
+.cart-carbon{
+      float: right;
+      margin: 15px;
+}
+
+.checkout-carbon {
+    background: none repeat scroll 0 0 #F9F3E3;
+    border: 1px solid #BBAFA0;
+    color: #F18200;
+    width: 95%;
+    padding: 15px;
+}
+
+.carbon-copy {
+    display: block;
+    padding-top: 10px;
+    font-style: italic;
+    font-size: .8em;
+}
+
+.tip {
+    position: relative;
+    text-decoration: none;
+}
+    
+.tip span {display: none;}
+
+.tip:hover span {
+  display: block;
+  position: absolute; 
+  padding: .5em;
+  content: attr(title);
+  width: 250px;
+  text-align: center;  
+  height: auto;  
+  bottom: 15px;
+  background: rgba(0,0,0,.8);
+  -moz-border-radius:10px;
+  -webkit-border-radius:10px;
+  border-radius:10px;    
+  color: #fff;
+  font-size: .86em;
+}
+
+.tip:hover span:after {
+  position: absolute;
+  display: block;
+  content: "";  
+  border-color: rgba(0,0,0,.8) transparent transparent transparent;
+  border-style: solid;
+  border-width: 10px;
+  height:0;
+  width:0;
+  position:absolute;
+  bottom: -16px;
+  left:1em;
+}
+
+.question-mark {
+    background: url("../images/i_question-mark.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline-block;
+    height: 16px;
+    margin: 0 0 1px;
+    vertical-align: middle;
+    width: 16px;
+}

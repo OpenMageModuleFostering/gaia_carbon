@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Description of class...
+ * 
+ * @category    Gaia
+ * @package     Gaia_Carbon
+ * @author      CZ Digital Team <martin.novak@czdigital.com.au>
+ */
+ -->
+<config>
+    <sections>
+        <carbon translate="label" module="carbon">
+            <label>Carbon Offset</label>
+            <tab>sales</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>365</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>                
+		<general>
+		    <label>General Settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+			<signup translate="label">
+			    <frontend_type>button</frontend_type>
+			    <frontend_model>carbon/adminhtml_system_config_form_button_signup</frontend_model>
+			    <sort_order>5</sort_order>
+			    <show_in_default>1</show_in_default>
+			    <show_in_website>0</show_in_website>
+			    <show_in_store>0</show_in_store>
+			</signup>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+			<environment>
+			    <label>Environment</label>
+			    <frontend_type>select</frontend_type>
+			    <source_model>carbon/system_config_source_environment</source_model>
+			    <sort_order>15</sort_order>
+			    <show_in_default>1</show_in_default>
+			    <show_in_website>1</show_in_website>
+			    <show_in_store>1</show_in_store>
+			    <comment>
+				<![CDATA[
+				<strong>Sandbox</strong> The offset pricing is random and therefore false. It cannot be used in a live environment.<br/>
+				<strong>Production</strong> The true pricing, guidance and assistance are available by registering for the API key above. 
+				]]>
+			    </comment>
+			</environment>
+			<api_key>
+			    <label>API Key</label>
+                            <frontend_type>text</frontend_type>                            
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+			    <depends>
+				<environment><![CDATA[5]]></environment>
+			    </depends>
+			</api_key>
+			<api_hash>
+			    <label>API Hash</label>
+                            <frontend_type>text</frontend_type>                            
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+			    <depends>
+				<environment><![CDATA[5]]></environment>
+			    </depends>
+			</api_hash>
+			<mode>
+			    <label>Mode</label>
+			    <frontend_type>select</frontend_type>
+			    <source_model>carbon/system_config_source_mode</source_model>
+			    <sort_order>40</sort_order>
+			    <show_in_default>1</show_in_default>
+			    <show_in_website>1</show_in_website>
+			    <show_in_store>1</show_in_store>
+			    <comment>
+				<![CDATA[
+				<strong>Optional</strong> Customer can choose to pay carbon offset charges.<br/>
+				<strong>Mandatory</strong> Carbon offset charges are automatically added to every order. 
+				]]>
+			    </comment>
+			</mode>
+			<weight_unit>
+			    <label>Weight Unit</label>
+			    <frontend_type>select</frontend_type>
+			    <source_model>carbon/system_config_source_unit_weight</source_model>
+			    <sort_order>50</sort_order>
+			    <show_in_default>1</show_in_default>
+			    <show_in_website>1</show_in_website>
+			    <show_in_store>1</show_in_store>
+			    <comment>
+				<![CDATA[
+				Weight unit as used in the system for all magento products.
+				]]>
+			    </comment>
+			</weight_unit>
+		    </fields>
+		</general>
+		<log>
+		    <label>Debug</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>20</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <active translate="label">
+                            <label>Enabled</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
+			<verbose translate="label">
+                            <label>Verbose</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </verbose>
+			<show_log translate="label">
+			    <frontend_type>button</frontend_type>
+			    <frontend_model>carbon/adminhtml_system_config_form_button_showlog</frontend_model>
+			    <sort_order>30</sort_order>
+			    <show_in_default>1</show_in_default>
+			    <show_in_website>0</show_in_website>
+			    <show_in_store>0</show_in_store>
+			</show_log>
+			<clear_log translate="label">
+			    <frontend_type>button</frontend_type>
+			    <frontend_model>carbon/adminhtml_system_config_form_button_clearlog</frontend_model>
+			    <sort_order>40</sort_order>
+			    <show_in_default>1</show_in_default>
+			    <show_in_website>0</show_in_website>
+			    <show_in_store>0</show_in_store>
+			</clear_log>
+		    </fields>
+		</log>
+            </groups>
+        </carbon>
+    </sections>
+</config>

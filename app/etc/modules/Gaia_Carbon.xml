@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Gaia_Carbon>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Gaia_Carbon>
+    </modules>
+</config>

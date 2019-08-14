@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Description of class...
+ * 
+ * @category    Gaia
+ * @package     Gaia_Carbon
+ * @author      CZ Digital Team <martin.novak@czdigital.com.au>
+ */
+ -->
+<layout version="0.1.0">
+    <checkout_cart_index>
+	<reference name="head">
+	    <action method="addCss"><stylesheet>gaia/carbon/css/styles.css</stylesheet></action>
+	</reference>
+	<reference name="checkout.cart.totals">
+	    <block type="carbon/checkout_carbon" name="cart.carbon.offset" template="gaia/checkout/cart/totals/carbon.phtml"/>
+	</reference>
+    </checkout_cart_index>
+    <checkout_onepage_index>
+	<reference name="head">
+	    <action method="addCss"><stylesheet>gaia/carbon/css/styles.css</stylesheet></action>
+	</reference>
+	<reference name="checkout.onepage.shipping_method">
+	    <block type="carbon/checkout_carbon" name="checkout.carbon.offset" template="gaia/checkout/onepage/carbon.phtml"/>
+	</reference>
+    </checkout_onepage_index>
+    <checkout_onepage_shippingmethod>
+	<reference name="root">
+	    <block type="carbon/checkout_carbon" name="checkout.carbon.offset" template="gaia/checkout/onepage/carbon.phtml"/>
+	</reference>
+    </checkout_onepage_shippingmethod>
+    
+    <sales_order_view>
+        <reference name="order_totals">
+            <block type="carbon/sales_order_carbon" name="carbon" />
+        </reference>
+    </sales_order_view>
+    <sales_order_print>
+        <reference name="order_totals">
+            <block type="carbon/sales_order_carbon" name="carbon" />
+        </reference>
+    </sales_order_print>
+    <sales_email_order_items>
+        <reference name="order_totals">
+            <block type="carbon/sales_order_carbon" name="carbon" />
+        </reference>
+    </sales_email_order_items>
+
+    <sales_order_invoice>
+        <reference name="invoice_totals">
+            <block type="carbon/sales_order_carbon" name="carbon" />
+        </reference>
+    </sales_order_invoice>
+    <sales_order_printinvoice>
+        <reference name="invoice_totals">
+            <block type="carbon/sales_order_carbon" name="carbon" />
+        </reference>
+    </sales_order_printinvoice>
+    <sales_email_order_invoice_items>
+        <reference name="invoice_totals">
+            <block type="carbon/sales_order_carbon" name="carbon" />
+        </reference>
+    </sales_email_order_invoice_items>
+
+    <sales_order_creditmemo>
+        <reference name="creditmemo_totals">
+            <block type="carbon/sales_order_carbon" name="carbon" />
+        </reference>
+    </sales_order_creditmemo>
+    <sales_order_printcreditmemo>
+        <reference name="creditmemo_totals">
+            <block type="carbon/sales_order_carbon" name="carbon" />
+        </reference>
+    </sales_order_printcreditmemo>
+    <sales_email_order_creditmemo_items>
+        <reference name="creditmemo_totals">
+            <block type="carbon/sales_order_carbon" name="carbon" />
+        </reference>
+    </sales_email_order_creditmemo_items>
+</layout> 

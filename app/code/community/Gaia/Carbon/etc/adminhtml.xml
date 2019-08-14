@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Description of class...
+ * 
+ * @category    Gaia
+ * @package     Gaia_Carbon
+ * @author      CZ Digital Team <martin.novak@czdigital.com.au>
+ */
+ -->
+<config>
+    <acl>
+        <resources>
+	    <all>
+                <title>Allow Everything</title>
+            </all>           
+            <admin>
+                <children>
+		    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <carbon translate="title" module="carbon">
+                                        <title>Carbon Offset</title>
+                                    </carbon>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

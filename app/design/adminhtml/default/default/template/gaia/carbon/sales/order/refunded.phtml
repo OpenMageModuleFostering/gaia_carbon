@@ -1,0 +1,30 @@
+<?php
+/**
+ * Description of class...
+ * 
+ * @category    Gaia
+ * @package     Gaia_Carbon
+ * @author      CZ Digital Team <martin.novak@czdigital.com.au>
+ */
+?>
+
+<?php if($this->getSource() instanceof Mage_Sales_Model_Order): ?>
+
+    <?php if ((float)$this->getSource()->getCarbonAmountRefunded() > 0): ?>
+        <tr>
+            <td class="label"><strong><?php echo Mage::helper('carbon')->__('Carbon offset refunded to customer') ?></strong></td>
+            <td><strong><?php echo $this->getSource()->getCarbonAmountRefunded(); ?></strong></td>
+        </tr>
+    <?php endif; ?>
+
+<?php else: ?>
+
+    <?php if ((float)$this->getSource()->getCarbonAmount()): ?>
+        <tr>
+            <td class="label"><strong><?php echo Mage::helper('carbon')->__('Carbon Offset Refunded') ?></strong></td>
+            <td><strong><?php echo $this->getSource()->getCarbonAmount(); ?></strong></td>
+        </tr>
+    <?php endif;  ?>
+
+<?php endif; ?>
+

@@ -1,0 +1,15 @@
+<?php /** @var $this Gaia_Carbon_Block_Checkout_Carbon **/ ?>
+<?php if($this->isEnabled() && $this->isOptional()): ?>
+<div class="checkout-carbon">
+    <li class="control">
+	<input class="css-checkbox" type="checkbox" name="add-carbon" id="add-carbon" value="1" title="<?php echo $this->__('Carbon Offset') ?>" <?php if($this->isCarbonSelected()) {echo 'checked=\"checked\"';}?> />
+	<label class="css-label" for="add-carbon"><?php echo $this->__('Add Carbon Offset') . ' ' . $this->getCarbonAmount() ?></label>
+    </li>
+    <span class="carbon-copy">
+	<?php echo $this->__($this->getCarbonDescription()) ?>
+	Information on the offset programme can be found <a target="_blank" title="carbon offset" href="<?php echo $this->getCarbonUrl()?>">here.</a>
+    </span>
+</div>
+<?php endif; ?>
+
+
