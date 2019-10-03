@@ -1,7 +1,7 @@
 {
-    "name": "OpenMageModuleFostering\/Gaia_Carbon",
+    "name": "openmage-module-fostering\/gaia_carbon",
     "type": "magento-module",
-    "license": "Open-Software-License",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "Allows your customers to negate the carbon emissions from the shipping of their order.",
     "authors": [
