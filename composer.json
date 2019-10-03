@@ -1,16 +1,19 @@
 {
-    "name": "OpenMageModuleFostering/Gaia_Carbon",
+    "name": "OpenMageModuleFostering\/Gaia_Carbon",
     "type": "magento-module",
     "license": "Open-Software-License",
     "homepage": "",
     "description": "Allows your customers to negate the carbon emissions from the shipping of their order.",
     "authors": [
-    {
-        "name": "Martin Novak",
-        "email": "martin.novak@czdigital.com.au"
-    }
-],
+        {
+            "name": "Martin Novak",
+            "email": "martin.novak@czdigital.com.au"
+        }
+    ],
     "suggest": {
-        "magento-hackathon/magento-composer-installer": "*"
-    }
+        "magento-hackathon\/magento-composer-installer": "*"
+    },
+    "keywords": [
+        "openmage-module"
+    ]
 }
